@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="numbers"></div>
+</body>
+
+<!-- первый вариант решения -->
+
+<!-- <script>
+    const divNumbers = document.getElementById("numbers");
+
+    for (var i = 1; i <= 100; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            addRow(divNumbers, `${i} A/B Testing`);
+        } else if (i % 3 == 0) {
+            addRow(divNumbers, `${i} A / B`);
+        } else if (i % 5 == 0) {
+            addRow(divNumbers, `${i} Testing`);
+        } else {
+            addRow(divNumbers, i);
+        }
+    }
+
+    function addRow(divNumbers, text) {
+        let newDiv = document.createElement("div");
+        newDiv.innerText = text;
+        divNumbers.appendChild(newDiv);
+    }
+</script> -->
+
+<!-- второй вариант решения -->
+
+<script>
+
+    for (var i = 1; i <= 100; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            addRow(`${i} A/B Testing`);
+        } else if (i % 3 == 0) {
+            addRow(`${i} A / B`);
+        } else if (i % 5 == 0) {
+            addRow(`${i} Testing`);
+        } else {
+            addRow(i);
+        }
+    }
+
+    function addRow(text) {
+        let newDiv = document.createElement("div");
+        newDiv.innerText = text;
+        document.body.appendChild(newDiv);
+    }
+</script>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Try to guess number from 1 to 100</h1>
+    <span id="message"></span>
+    <input id="number-try" type="text" />
+    <button id="btn-try">Try number</button>
+</body>
+<script>
+    const message = document.getElementById("message");
+    const inputNumber = document.getElementById("number-try");
+    const tryButton = document.getElementById("btn-try");
+    inputNumber.onchange = numberChange;
+    tryButton.onclick = tryNumber;
+
+    let userAnswer;
+
+    // var answer = parseInt(Math.random() * 100);
+    var answer = Math.random();
+    console.log(answer);
+    var attemptsCount = 0;
+
+    function tryNumber() {
+        // console.log(answer);
+        // Функция parseInt() принимает строку в качестве аргумента 
+        // и возвращает целое число в соответствии с указанным основанием системы счисления.
+        userAnswer = parseInt(userAnswer);
+        if (userAnswer > answer) {
+            showMessage("Too high");
+            attemptsCount += 1;
+        } else if (userAnswer < answer) {
+            showMessage("Too Low");
+            attemptsCount += 1;
+        } else if (userAnswer == answer) {
+            showMessage(
+                `You found the number, count of attempts: ${attemptsCount}`
+            );
+        } else {
+            showMessage("Need to type number");
+        }
+    }
+
+    function showMessage(text) {
+        message.innerText = text;
+    }
+
+    function numberChange(e) {
+        userAnswer = e.target.value;
+    }
+</script>
+
+</html>

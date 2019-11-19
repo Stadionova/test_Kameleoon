@@ -1,0 +1,121 @@
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(13, 42px);
+}
+
+.header {
+  background-color: brown;
+  height: 50px;
+  width: 1000px;
+  border: 1px solid black;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+nav {
+  background-color: rgb(61, 216, 157);
+  grid-column: 1 / 4;
+  grid-row: 1;
+  border: 1px solid black;
+  margin: 5px 5px 5px 0px;
+}
+
+.sidebar {
+  background-color: rgb(211, 166, 44);
+  grid-column: 1;
+  grid-row: 2 / 8;
+  border: 1px solid black;
+  margin: 5px 5px 5px 0px;
+}
+
+.contentArea {
+  background-color: rgb(211, 44, 161);
+  grid-column: 2 / 4;
+  grid-row: 2 / 8;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.peopleViewed {
+  background-color: rgb(44, 61, 211);
+  grid-column: 4;
+  grid-row: 1;
+  border: 1px solid black;
+  margin-top: 5px;
+}
+
+.peopleViewed span {
+  font-size: 14px;
+}
+
+.peopleViewedProducts {
+  background-color: rgb(44, 61, 211);
+  grid-column: 4;
+  grid-row: 2 / 8;
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+
+.product__container {
+  margin-top: 30px;
+}
+
+.img {
+  background-color: blanchedalmond;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.product {
+  width: 100px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.product span:nth-child(1) {
+  text-align: center;
+}
+
+.peopleBought {
+  background-color: rgb(233, 48, 63);
+  grid-column: 1 / 5;
+  grid-row: 8;
+  border: 1px solid black;
+}
+
+.title {
+  width: 300px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.peopleBought span {
+  font-size: 14px;
+}
+
+.peopleBoughtProducts {
+  background-color: rgb(233, 48, 63);
+  grid-column: 1 / 5;
+  grid-row: 9 / 12;
+  border: 1px solid black;
+}
+
+.product__container__bought {
+  display: flex;
+  margin-top: 30px;
+}
+
+footer {
+  background-color: rgb(32, 241, 49);
+  grid-column: 1 / 5;
+  grid-row: 12 / 14;
+  border: 1px solid black;
+  margin: 5px 0px 5px 0px;
+}
